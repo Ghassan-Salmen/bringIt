@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlacingOrderActivity">
+
+    <RelativeLayout
+        android:id="@+id/place_order_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/my_primary">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Place Your Order"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginBottom="50dp"
+        android:layout_below="@+id/place_order_title"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/order_by_rl">
+
+        <TextView
+            android:layout_marginBottom="20dp"
+            android:id="@+id/order_by_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="order Placed by: "
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/placing_order_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/order_by_txt">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+
+    </RelativeLayout>
+
+   <RelativeLayout
+
+       android:layout_margin="10dp"
+       android:layout_below="@+id/order_by_rl"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/order_title_rl">
+
+       <TextView
+           android:id="@+id/order_title_txt"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Order Title: "
+           android:textSize="20dp"
+           android:textStyle="bold" />
+
+       <EditText
+           android:id="@+id/order_title_et"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:layout_below="@+id/order_title_txt"
+           android:hint="what do you want to order?" />
+   </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_margin="10dp"
+        android:layout_below="@+id/order_title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/order_place_rl">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order Place:"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:id="@+id/order_place_txt"/>
+
+        <EditText
+            android:id="@+id/order_place_et"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/order_place_txt"
+            android:hint="From where you want the order?(restaurant)" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/confirm_order_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:text="Confirm Order" />
+
+</RelativeLayout>
